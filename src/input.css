@@ -83,26 +83,26 @@
         @apply px-[.8rem] py-[1rem] ml-[15rem] lg:hidden;
     }
     .circle span{
-        @apply w-[.3rem] h-[.3rem] bg-black block rounded-full duration-[.5s] ease-in ;
+        @apply w-[.4rem] h-[.4rem] bg-black block rounded-full duration-[.5s] transition ease-in-out ;
     }
     .circle span:nth-child(2){
         @apply my-[.2rem];
     }
     .circle.open span:first-child{
-        @apply translate-x-0 translate-y-[6px] bg-black duration-[.5s] rotate-[225deg] ease-in;
+        @apply translate-x-0 translate-y-[1rem] bg-black rotate-[225deg] transition ease-in duration-[.5s] ;
     }
     .circle.open span:last-child{
-        @apply translate-x-0 translate-y-[-5px] bg-black duration-[.5s] rotate-[-225deg] ease-in;
+        @apply translate-x-0 translate-y-[-1rem] bg-black duration-[.5s] rotate-[-225deg] transition ease-in-out w-[.3rem] h-[.3rem];
     }
     .circle.open span:nth-child(2){
-        @apply opacity-0 duration-[.5s] ease-in;
+        @apply transition ease-in-out duration-[.5s] w-[.3rem] h-[.3rem];
     }
 
     .circle__actions{
-        @apply absolute top-[5rem] w-[15rem]  right-0 h-[9rem]  transition-all duration-500 lg:relative lg:max-h-[50rem] lg:bg-transparent lg:top-0 lg:w-[15rem] ;
+        @apply absolute top-[5rem] w-[15rem]  right-0 max-h-0 overflow-hidden transition-all duration-500 lg:relative lg:max-h-[50rem] lg:bg-transparent lg:top-0 lg:w-[15rem] ;
     }
     .circle__actions.open{
-        @apply max-h-fit transition-all duration-100 ease-linear bg-pink-400 rounded-[.4rem] ;
+        @apply max-h-fit transition-all duration-100 ease-linear bg-light rounded-[.4rem] ;
     }
     .circle__actions ul{
         @apply lg:hidden ml-0  ; 
@@ -114,7 +114,15 @@
         @apply mr-[1rem] text-primary text-[1rem] font-bold
     }
     .header__btn {
-        @apply bg-light pt-[.8rem] pb-[.5rem] border-2 border-primary text-blue-400 mt-[.6rem] text-center m-auto w-[10rem]
+        @apply pt-[.8rem] pb-[.5rem]  mt-[.6rem] text-center m-auto w-[10rem] border-solid border-[2px] border-primary hover:text-light hover:bg-primary hover:border-green-400 
     }
 
 }
+
+
+/* .header__btn {
+    @apply inline-block py-[1rem] px-[2rem] text-center
+}
+.btn.get{
+    @apply border-solid border-[2px] border-primary hover:text-light hover:bg-primary hover:border-green-400 
+} */

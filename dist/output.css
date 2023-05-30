@@ -783,13 +783,17 @@ html{
 
 .circle span {
   display: block;
-  height: .3rem;
-  width: .3rem;
+  height: .4rem;
+  width: .4rem;
   border-radius: 9999px;
   --tw-bg-opacity: 1;
   background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
+  transition-duration: 150ms;
   transition-duration: .5s;
-  transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .circle span:nth-child(2) {
@@ -799,38 +803,55 @@ html{
 
 .circle.open span:first-child {
   --tw-translate-x: 0px;
-  --tw-translate-y: 6px;
+  --tw-translate-y: 1rem;
   --tw-rotate: 225deg;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
   --tw-bg-opacity: 1;
   background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
   transition-duration: .5s;
   transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
 }
 
 .circle.open span:last-child {
+  height: .3rem;
+  width: .3rem;
   --tw-translate-x: 0px;
-  --tw-translate-y: -5px;
+  --tw-translate-y: -1rem;
   --tw-rotate: -225deg;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
   --tw-bg-opacity: 1;
   background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
+  transition-duration: 150ms;
   transition-duration: .5s;
-  transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .circle.open span:nth-child(2) {
-  opacity: 0;
+  height: .3rem;
+  width: .3rem;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
+  transition-duration: 150ms;
   transition-duration: .5s;
-  transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .circle__actions {
   position: absolute;
   top: 5rem;
   right: 0px;
-  height: 9rem;
+  max-height: 0px;
   width: 15rem;
+  overflow: hidden;
   transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 500ms;
@@ -851,7 +872,7 @@ html{
   max-height: fit-content;
   border-radius: .4rem;
   --tw-bg-opacity: 1;
-  background-color: rgb(244 114 182 / var(--tw-bg-opacity));
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
   transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 100ms;
@@ -890,15 +911,21 @@ html{
   margin-top: .6rem;
   width: 10rem;
   border-width: 2px;
+  border-style: solid;
   --tw-border-opacity: 1;
   border-color: rgb(7 180 171 / var(--tw-border-opacity));
-  --tw-bg-opacity: 1;
-  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
   padding-top: .8rem;
   padding-bottom: .5rem;
   text-align: center;
+}
+
+.header__btn:hover {
+  --tw-border-opacity: 1;
+  border-color: rgb(74 222 128 / var(--tw-border-opacity));
+  --tw-bg-opacity: 1;
+  background-color: rgb(7 180 171 / var(--tw-bg-opacity));
   --tw-text-opacity: 1;
-  color: rgb(96 165 250 / var(--tw-text-opacity));
+  color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
 .sticky {
@@ -916,3 +943,10 @@ html{
   max-width: 140rem;
   padding: 1.5rem;
 }
+
+/* .header__btn {
+    @apply inline-block py-[1rem] px-[2rem] text-center
+}
+.btn.get{
+    @apply border-solid border-[2px] border-primary hover:text-light hover:bg-primary hover:border-green-400 
+} */
