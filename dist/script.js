@@ -1,39 +1,22 @@
-// toggle menu
-const toggleMenu = document.querySelector(".toggle__menu");
-const mobileNav = document.querySelector(".header__actions");
-const header = document.querySelector(".header");
-const blurr = document.querySelector(".blur");
-toggleMenu.addEventListener("click", () => {
-    toggleMenu.classList.toggle("open");
-    mobileNav.classList.toggle("open");
-    header.classList.toggle("open");
-    blurr.classList.toggle("open");
+const headerNav = document.querySelector('.header__nav');
+const toggleMenu = document.querySelector('.toggle__menu');
+toggleMenu.addEventListener('click', ()=>{
+    headerNav.classList.toggle('open');
+    toggleMenu.classList.toggle('open');
 });
 
-// circle
-const circle = document.querySelector(".circle");
-const circleNav = document.querySelector(".circle__actions");
-circle.addEventListener("click", () => {
-    circle.classList.toggle("open");
-    circleNav.classList.toggle("open");
-  });
+const contactNav = document.querySelector('.contact__nav');
+const toggleContact = document.querySelector('.toggle__contact');
+toggleContact.addEventListener('click', ()=>{
+    contactNav.classList.toggle('open');
+    toggleContact.classList.toggle('open');
+});
 
-//drop down
-const head = document.querySelectorAll(".header__item h4");
-head.forEach((drop) => {
-  drop.addEventListener("click", () => {
-    drop.nextElementSibling.classList.toggle("open");
-    drop.querySelector("i").classList.toggle("open");
+const nav = document.querySelectorAll(".header__nav ul li a");
+nav.forEach((baba) => {
+  baba.addEventListener("click", () => {
+    baba.nextElementSibling.classList.toggle("open");
+    baba.querySelector("i").classList.toggle("open");
   });
 });
 
-// help=scroll
-const hscroll = document.querySelector(".links__scroll");
-window.addEventListener("scroll", () => {
-  console.log(window.pageYOffset);
-  if (window.pageYOffset >= 300 && window.pageYOffset <= 400) {
-    hscroll.classList.add("sticky");
-  } else {
-    hscroll.classList.remove("sticky");
-  }
-});
