@@ -1,0 +1,120 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.container{
+    @apply max-w-[140rem] mx-auto p-[1.5rem];
+}
+@layer base{
+    html{
+        font-family:"Montserrat", sans-serif, Arial, sans-serif;
+    }
+}
+
+@layer components{
+    .header__wrapper{
+        @apply flex items-center border-b-[1px] z-[999];
+    }
+    .branding img{
+        @apply max-w-[9rem]
+    }
+    .header__nav{
+        @apply hidden;
+    }
+    .header__social{
+        @apply p-[.5rem] border-b-[1px];
+    }
+    .header__social ul{
+        @apply flex justify-center gap-[1rem] pb-[1rem] pt-[1rem];
+    }
+    .header__actions{
+        @apply block fixed top-[4.9rem] w-[55%] left-[-100rem] h-[100vh] overflow-hidden overflow-y-auto ease-in duration-[.5s] lg:hidden;
+    }
+    .header__actions.open{
+        @apply left-0 ease-in duration-[.5s] bg-light ;
+    }
+    .header__item h4{
+        @apply text-dark p-[1rem] flex justify-between text-[1rem] cursor-pointer hover:bg-primary duration-[.5s] transition-all hover:text-light max-h-[100rem];
+    }
+    .header__item:first-child{
+        @apply bg-primary text-light
+    }
+
+    .header__item i{
+        @apply transition ease-linear duration-300;
+    }
+
+    .header__item i.open{
+        @apply transition ease-linear duration-300 rotate-[180deg];
+    }
+    .header__item{
+        @apply my-[.5rem];
+    }
+    .header__item ul{
+        @apply max-h-0 overflow-hidden duration-[.5s] transition ease-in;
+    }
+
+    .header__item ul.open{
+        @apply max-h-[50rem] p-[1rem] transition ease-linear duration-[.5s];
+    }
+    .header__item ul li {
+        @apply my-[2rem]  hover:bg-primary duration-[.5s] transition-all;
+    }
+    .header__item ul li span{
+        @apply  text-primary border-b-[1px] ;
+    }
+    .toggle__menu{
+        @apply px-[.3rem] py-[1rem] lg:hidden ml-0;
+    }
+    .toggle__menu span{
+        @apply w-[1.5rem] h-[.2rem] bg-black block rounded-full duration-[.5s] ease-in ;
+    }
+    .toggle__menu span:nth-child(2){
+        @apply my-[.2rem];
+    }
+    .toggle__menu.open span:first-child{
+        @apply w-[1rem] translate-x-0 translate-y-[12px] bg-black duration-[.5s] rotate-[225deg] ease-in;
+    }
+    .toggle__menu.open span:last-child{
+        @apply w-[1rem] translate-x-0 translate-y-[-13px] bg-black duration-[.5s] rotate-[-225deg] ease-in;
+    }
+
+    .circle{
+        @apply px-[.8rem] py-[1rem] ml-[15rem] lg:hidden;
+    }
+    .circle span{
+        @apply w-[.3rem] h-[.3rem] bg-black block rounded-full duration-[.5s] ease-in ;
+    }
+    .circle span:nth-child(2){
+        @apply my-[.2rem];
+    }
+    .circle.open span:first-child{
+        @apply translate-x-0 translate-y-[6px] bg-black duration-[.5s] rotate-[225deg] ease-in;
+    }
+    .circle.open span:last-child{
+        @apply translate-x-0 translate-y-[-5px] bg-black duration-[.5s] rotate-[-225deg] ease-in;
+    }
+    .circle.open span:nth-child(2){
+        @apply opacity-0 duration-[.5s] ease-in;
+    }
+
+    .circle__actions{
+        @apply absolute top-[5rem] w-[15rem]  right-0 h-[9rem]  transition-all duration-500 lg:relative lg:max-h-[50rem] lg:bg-transparent lg:top-0 lg:w-[15rem] ;
+    }
+    .circle__actions.open{
+        @apply max-h-fit transition-all duration-100 ease-linear bg-pink-400 rounded-[.4rem] ;
+    }
+    .circle__actions ul{
+        @apply lg:hidden ml-0  ; 
+    }
+    .circle__actions ul li{
+        @apply pt-[1rem] px-[1.5rem] text-[1rem] text-dark ;
+    }
+    .circle__actions i{
+        @apply mr-[1rem] text-primary text-[1rem] font-bold
+    }
+    .header__btn {
+        @apply bg-light pt-[.8rem] pb-[.5rem] border-2 border-primary text-blue-400 mt-[.6rem] text-center m-auto w-[10rem]
+    }
+
+}
