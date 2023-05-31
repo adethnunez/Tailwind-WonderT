@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
     <link rel="stylesheet" href="./output.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/min/tiny-slider.js">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css">
     <script src="https://kit.fontawesome.com/c0a9717a9e.js" crossorigin="anonymous"></script>
     
 </head>
@@ -125,24 +125,13 @@
     </header>
 
     <section class="banner">
-            <div class="banner__wrapper">
-                <div class="slider_page">
+        <div class="banner__wrapper">
+            <div class="banner__container">
 
-                    <div class="slider__item_1">
-                        <div class="slider__text">
-                            <p>ENJOY THE BEST DESTINATIONS WITH OUR TRAVEL AGENCY</p>
-                            <h1>Expore <span>The World</span> </h1>
-                            <div class="slider_btn">
-                                <ul>
-                                    <li><a href="" class="btn"><span></span>Get in Touch</a></li>
-                                </ul>
-                            </div>
-                    </div>
-                </div>
-                <div class="slider__item_2">
+                <div class="slider__item_1">
                     <div class="slider__text">
-                        <p>A TEAM OF PROFESSIONAL TRAVEL EXPERTS</p>
-                        <h1>Trust <span>Our Experiences</span> </h1>
+                        <p>ENJOY THE BEST DESTINATIONS WITH OUR TRAVEL AGENCY</p>
+                        <h1>Expore <span>The World</span> </h1>
                         <div class="slider_btn">
                             <ul>
                                 <li><a href="" class="btn"><span></span>Get in Touch</a></li>
@@ -150,35 +139,76 @@
                         </div>
                 </div>
             </div>
-            <div class="slider__item_3">
+            <div class="slider__item_2">
                 <div class="slider__text">
-                    <p>BUILD YOUR NEXT HOLIDAY TRIP WITH US</p>
-                    <h1>Create  <span>Your Tour</span> </h1>
-
+                    <p>A TEAM OF PROFESSIONAL TRAVEL EXPERTS</p>
+                    <h1>Trust <span>Our Experiences</span> </h1>
                     <div class="slider_btn">
-                    <ul>
-                        <li><a href="" class="btn"><span></span>Get in Touch</a></li>
-                    </ul>
-                </div>
+                        <ul>
+                            <li><a href="" class="btn"><span></span>Get in Touch</a></li>
+                        </ul>
+                    </div>
             </div>
         </div>
-            </div>
-    </section> 
+        <div class="slider__item_3">
+            <div class="slider__text">
+                <p>BUILD YOUR NEXT HOLIDAY TRIP WITH US</p>
+                <h1>Create  <span>Your Tour</span> </h1>
 
-    <script src="./script.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/min/tiny-slider.js"></script>
-    <script type="module">
-        var slider = tns({ 
-            container: '.banner__wrapper',
-            items: 1,
-            slideBy: 'page',
-            autoplay:true,
-            autoplayButtonOutput: false,
-            axis: 'vertical',
-            nav: true,
-            navPosition: 'top',
-            controls: false,
-        })
+                <div class="slider_btn">
+                <ul>
+                    <li><a href="" class="btn"><span></span>Get in Touch</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+        </div>
+</section> 
+
+
+<!-- <section class="tours">
+    <div class="container">
+        <div class="tours__wrapper">
+            <div class="tour__img">
+                <div class="img__contain">
+                    <div class="tour__item">
+                        <img src="./img/tour1.jpg" alt="">
+                        <h5>Balloon Flights</h5>
+                    </div>
+                </div>
+                <div class="img__contain">
+                    <div class="tour__item">
+                        <img src="./img/tour2.jpg" alt="">
+                        <h5>Mountain Holiday</h5>
+                    </div>
+                </div>
+                <div class="img__contain">
+                    <div class="tour__item">
+                        <img src="./img/tour3.jpg" alt="">
+                        <h5>Beach Holiday</h5>
+                    </div>
+                </div>
+            </div>
+            <a href=""></a>
+        </div>
+    </div>
+</section> -->
+
+
+<script src="./script.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
+<script type="module">
+    var slider = tns({
+      container: '.banner__container',
+      items: 1,
+      slideBy: 'page',
+      autoplay: true,
+      axis: 'vertical',
+      controls: false,
+      nav: true,
+      navPositon: 'top',
+      autoplayButtonOutput: false,
+    });
     </script>
 
 </body>

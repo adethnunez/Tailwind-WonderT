@@ -19,9 +19,9 @@ module.exports = {
         '2xl': '1536px',
       },
       backgroundImage:{
-        'slider1': 'url("./img/slider1.jpg")',
-        'slider2': 'url("./img/slider2.jpg")',
-        'slider3': 'url("./img/slider3.jpg")',
+        'slider1': 'url("./img/banner1.jpg")',
+        'slider2': 'url("./img/banner2.jpg")',
+        'slider3': 'url("./img/banner3.jpg")',
       }
     },
   },
