@@ -4,9 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Home</title>
     <link rel="stylesheet" href="./output.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/min/tiny-slider.js">
     <script src="https://kit.fontawesome.com/c0a9717a9e.js" crossorigin="anonymous"></script>
+    
 </head>
 <body>
     <header class="header">
@@ -20,17 +22,17 @@
                         </div>
                         <img src="./img/logo.png" alt="">
                     </div>
+                    <div class="toggle__contact">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
                     <div class="contact__nav">
                         <ul>
                             <li><i class="fa-regular fa-clock"></i>09:00AM - 05:00PM</li>
                             <li><a href=""><i class="fa-solid fa-phone"></i>+1 323-913-4688</a></li>
                             <li><a href="" class="btn"><span></span>Get a Free Quote</a></li>
                         </ul>
-                    </div>
-                    <div class="toggle__contact">
-                        <span></span>
-                        <span></span>
-                        <span></span>
                     </div>
                 </div>
             </div>
@@ -122,11 +124,62 @@
                 </div>
     </header>
 
-    <!-- <section class="banner">
+    <section class="banner">
             <div class="banner__wrapper">
-                <img src="./img/parallax-1-1920x850.jpg" alt="">
+                <div class="slider_page">
+
+                    <div class="slider__item_1">
+                        <div class="slider__text">
+                            <p>ENJOY THE BEST DESTINATIONS WITH OUR TRAVEL AGENCY</p>
+                            <h1>Expore <span>The World</span> </h1>
+                            <div class="slider_btn">
+                                <ul>
+                                    <li><a href="" class="btn"><span></span>Get in Touch</a></li>
+                                </ul>
+                            </div>
+                    </div>
+                </div>
+                <div class="slider__item_2">
+                    <div class="slider__text">
+                        <p>A TEAM OF PROFESSIONAL TRAVEL EXPERTS</p>
+                        <h1>Trust <span>Our Experiences</span> </h1>
+                        <div class="slider_btn">
+                            <ul>
+                                <li><a href="" class="btn"><span></span>Get in Touch</a></li>
+                            </ul>
+                        </div>
+                </div>
             </div>
-    </section> -->
+            <div class="slider__item_3">
+                <div class="slider__text">
+                    <p>BUILD YOUR NEXT HOLIDAY TRIP WITH US</p>
+                    <h1>Create  <span>Your Tour</span> </h1>
+
+                    <div class="slider_btn">
+                    <ul>
+                        <li><a href="" class="btn"><span></span>Get in Touch</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+            </div>
+    </section> 
+
     <script src="./script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/min/tiny-slider.js"></script>
+    <script type="module">
+        var slider = tns({ 
+            container: '.banner__wrapper',
+            items: 1,
+            slideBy: 'page',
+            autoplay:true,
+            autoplayButtonOutput: false,
+            axis: 'vertical',
+            nav: true,
+            navPosition: 'top',
+            controls: false,
+        })
+    </script>
+
 </body>
 </html>
