@@ -6,6 +6,26 @@
     @apply mx-auto p-[1.5rem] w-full max-w-[140rem];
 }
 
+.tns-nav{
+    @apply absolute right-3 top-[45%] z-40 flex flex-col lg:top-[50%] lg:right-[20rem];
+}
+
+.tns-nav button{
+    @apply bg-gray-400 h-[1rem] w-[1rem] my-1 transition-all;
+}
+.tns-nav .tns-nav-active{
+    @apply bg-primary transition-all;
+}
+.tns-slide-active .banner__content h1{
+    @apply translate-y-0 opacity-100 transition-all duration-1000;
+}
+.tns-slide-active .banner__content p{
+    @apply translate-x-0 opacity-100 transition-all duration-1000;
+}
+.tns-slide-active .banner__content a{
+    @apply translate-x-0 opacity-100 transition-all duration-1000;
+} 
+
 @layer utilities{
     .btn{
         @apply p-2 border-2 border-primary hover:text-dark transition-all relative;
@@ -195,40 +215,96 @@
     }
 
     /* ------------------------TOUR------------------- */
-    .tour__img{
-        @apply w-full flex flex-col justify-center;
+    /* .view__pic{
+        @apply w-full flex flex-col justify-center ;
+    } */
+    /* .view__wrapper{
+        @apply lg:mb-0
+    } */
+    .view{
+        @apply mt-[1rem] bg-[#f7f7f7]
     }
-    .tour__item img{
-        @apply hover:scale-105 transition-all;
+    .view__group{
+        @apply  max-h-[25rem] bg-no-repeat relative w-full flex flex-row justify-center my-10 transition-all cursor-pointer lg:top-[-9rem]   ;
     }
-    .tour__item{
-        @apply max-h-[25rem] bg-no-repeat relative w-full flex flex-col justify-center my-10 transition-all;
+      .view__pic{
+        @apply  lg:flex  lg:ml-[20rem] lg:mr-[20rem] lg:max-h-[20rem]
+    }  
+    .view__detail img{
+        @apply  hover:scale-105 transition-all  ;
+    } 
+    .view__detail h4{
+        @apply absolute w-full bottom-0 text-[1.5rem] text-center font-bold text-puti transition-all mb-[1.5rem] lg:text-center ;
     }
-    .tour__item h5{
-        @apply absolute w-full bottom-0 text-[2rem] text-center font-bold text-white transition-all;
-    }
-    .img__contain{
-        @apply overflow-hidden h-[23rem] w-[20rem] my-5 flex items-center mx-auto;
+    .view__group{
+        @apply overflow-hidden h-[25rem] w-[25rem] my-5 flex items-center mx-auto lg:relative lg:w-[50rem] lg:h-[30rem]  ;
     }
 
+
+    .view__btn{
+        @apply text-[1.1rem] flex justify-center 
+    }
+    .view__btn a{
+        @apply hover:translate-x-2 duration-200
+    }
+    .view__btn a:hover i{
+        @apply scale-x-150 duration-300
+    }
+    .view__btn i{
+        @apply ml-[.5rem] lg:p-0
+    }
+   
+
+    .new__tab{
+        @apply mt-[3rem]
+    }
+    .new__nav h2{
+        @apply text-center mt-[1.5rem] text-[2rem] font-semibold
+    }
+    .new__nav ul{
+        @apply flex items-center justify-between mt-[1rem]
+    }
+
+
+    .services__wrapper{
+        @apply mt-[2rem] lg:grid lg:grid-cols-3 lg:gap-[1.5rem] lg:m-auto lg:w-[90rem]
+    }
+    .services__title{
+        @apply text-dark text-[2rem] text-center
+    }
+    .services__item{
+        @apply border-solid border-[8px] border-[#f4f4f4] mb-[2rem] 
+    }
+    .container{
+            @apply m-0 flex flex-col gap-[1.5rem]
+    }
+    .services__icon{
+        @apply flex justify-center mt-[1rem] 
+    }
+    .services__icon i{
+        @apply text-primary text-[2rem] 
+    }
+    .services__text {
+        @apply text-[#a0bada] pt-[1.5rem] lg:flex 
+    }
+    .services__text h3{
+        @apply text-center text-dark text-[1.5rem]
+    }
+    .services__text p{
+        @apply text-center pt-[1rem] pb-[1rem]
+    }
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
 }
 
-.tns-nav{
-    @apply absolute right-3 top-[45%] z-40 flex flex-col lg:top-[50%] lg:right-[20rem];
-}
-
-.tns-nav button{
-    @apply bg-gray-400 h-[1rem] w-[1rem] my-1 transition-all;
-}
-.tns-nav .tns-nav-active{
-    @apply bg-primary transition-all;
-}
-.tns-slide-active .banner__content h1{
-    @apply translate-y-0 opacity-100 transition-all duration-1000;
-}
-.tns-slide-active .banner__content p{
-    @apply translate-x-0 opacity-100 transition-all duration-1000;
-}
-.tns-slide-active .banner__content a{
-    @apply translate-x-0 opacity-100 transition-all duration-1000;
-}
