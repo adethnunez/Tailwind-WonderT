@@ -17,28 +17,28 @@ toggleContact.addEventListener('click', ()=>{
     toggleMenu.classList.remove('open');
 });
 
-/*New tab*/
-const starNav = document.querySelectorAll(".new__nav__link");
-const starContent = document.querySelectorAll(".new__tab__content");
-starNav.forEach((star) => {
-  star.addEventListener("click", () => {
+//coffee nav
+const starNav = document.querySelectorAll(".discover__nav__link");
+const starContent = document.querySelectorAll(".discover__tab__content");
+starNav.forEach((nav) => {
+    nav.addEventListener("click", () => {
     removeActiveStar();
-    star.classList.add("active");
-    const activeContent = document.querySelector(`#${star.id}-content`);
+    nav.classList.add("active");
+    const activeContent = document.querySelector(`#${nav.id}-content`);
     removeActiveContent();
     activeContent.classList.add("active");
-  });
+    });
 });
 
 function removeActiveStar() {
-  starNav.forEach((star) => {
-    star.classList.remove("active");
+  starNav.forEach((nav) => {
+  nav.classList.remove("active");
   });
 }
 
 function removeActiveContent() {
-  starContent.forEach((star) => {
-    star.classList.remove("active");
+  starContent.forEach((nav) => {
+  nav.classList.remove("active");
   });
 }
 

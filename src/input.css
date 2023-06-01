@@ -255,14 +255,60 @@
     }
    
 
-    .new__tab{
-        @apply mt-[3rem]
+    .discover__wrapper{
+        @apply lg:flex lg:items-start lg:justify-center gap-[5rem];
     }
-    .new__nav h2{
-        @apply text-center mt-[1.5rem] text-[2rem] font-semibold
+    .discover__nav{
+        @apply text-center max-w-[30rem] lg:max-w-[90rem];
     }
-    .new__nav ul{
-        @apply flex items-center justify-between mt-[1rem]
+   /* .discover-container{
+    @apply flex flex-col justify-center
+   } */
+    
+    .discover__nav ul{
+        @apply flex justify-center items-center flex-wrap lg:flex-nowrap;
+    }
+    .discover__nav ul li{
+        @apply relative py-[.5rem] px-[1rem] gap-[2rem] border-t-[1px] border-b-[1px] lg:border-b-[3px] lg:border-t-0;
+    }
+    .discover__nav ul li:last-child{
+        @apply mt-[1rem] lg:mt-0 ;
+    }
+    .discover__nav__link.active{
+        @apply border-primary;
+    }
+    .discover__nav__link.active a{
+        @apply  text-primary;
+    }
+    .discover__nav ul li a{
+        @apply text-dark text-center text-[1.2rem] hover:text-primary;
+    }
+    .discover__content{
+        @apply relative min-h-[17rem];
+    }
+    .discover__tab{
+        @apply lg:block;
+    }
+    .discover__tab h2{
+        @apply text-center font-semibold text-[1.5rem] my-[2rem];
+    }
+    .discover__tab__content{
+        @apply absolute opacity-0 mx-auto max-w-[30rem] translate-x-[5rem]; 
+    }
+    .discover__tab__content p{
+        @apply text-center my-[1rem];
+    }
+    .discover__tab__content.active{
+        @apply opacity-100 translate-x-0;
+    }
+    .discover__btn{
+        @apply  mt-[4rem] flex gap-[2rem] justify-center;
+    }
+    .btn.primary{
+        @apply text-center text-light bg-primary border-[2px] border-primary px-[2rem] hover:border-dark hover:bg-transparent hover:text-dark py-[1rem] w-[11rem] h-[4rem];
+    }
+    .btn.clear{
+        @apply text-center text-dark px-[2rem] py-[1rem] bg-transparent border-[2px] border-dark hover:bg-primary hover:border-primary w-[11rem] h-[4rem];
     }
 
 
