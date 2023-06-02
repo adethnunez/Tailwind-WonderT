@@ -1287,10 +1287,32 @@ html{
   }
 }
 
+/* .view__wrapper a span{
+        @apply flex items-center w-[25px] opacity-90 transform transition-[.3s] ease-in;
+    }
+    .view__wrapper a:hover span{
+        @apply w-[40px] opacity-90;
+    }
+    .view__wrapper a span::before, .tour__wrapper a span::after{
+        @apply content-[''] inline-block transform transition-[.3s] ease-in;
+    }
+    .view__wrapper a span::before{
+        @apply h-[2px] flex-grow-[1] bg-dark;
+    }
+    .view__wrapper a span::after{
+        @apply w-0 h-0 border-solid border-t-[3px] border-r-0 border-b-[3px] border-l-[6px] border-t-transparent border-r-transparent border-b-transparent border-l-black;
+    } */
+
 .view__btn {
   display: flex;
   justify-content: center;
   font-size: 1.1rem;
+}
+
+@media (min-width: 1024px) {
+  .view__btn {
+    padding-bottom: 3rem;
+  }
 }
 
 .view__btn a {
@@ -1512,7 +1534,7 @@ html{
   .services__wrapper {
     margin: auto;
     display: grid;
-    width: 90rem;
+    width: 75rem;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 1.5rem;
   }
@@ -1533,6 +1555,12 @@ html{
   border-color: rgb(244 244 244 / var(--tw-border-opacity));
 }
 
+@media (min-width: 1024px) {
+  .services__item {
+    display: flex;
+  }
+}
+
 .container {
   margin: 0px;
   display: flex;
@@ -1547,6 +1575,7 @@ html{
 }
 
 .services__icon i {
+  margin: 1rem;
   font-size: 2rem;
   --tw-text-opacity: 1;
   color: hsl(175.96 98.89% 35.29% / var(--tw-text-opacity));
@@ -1555,26 +1584,259 @@ html{
 .services__text {
   padding-top: 1.5rem;
   --tw-text-opacity: 1;
-  color: rgb(160 186 218 / var(--tw-text-opacity));
+  color: rgb(156 163 175 / var(--tw-text-opacity));
 }
 
 @media (min-width: 1024px) {
   .services__text {
-    display: flex;
+    margin-right: 1.5rem;
   }
 }
 
 .services__text h3 {
+  cursor: pointer;
   text-align: center;
   font-size: 1.5rem;
   --tw-text-opacity: 1;
   color: hsl(208.7 51.11% 17.65% / var(--tw-text-opacity));
 }
 
+.services__text h3:hover {
+  --tw-text-opacity: 1;
+  color: hsl(175.96 98.89% 35.29% / var(--tw-text-opacity));
+}
+
+@media (min-width: 1024px) {
+  .services__text h3 {
+    text-align: justify;
+  }
+}
+
 .services__text p {
   padding-top: 1rem;
   padding-bottom: 1rem;
   text-align: center;
+}
+
+@media (min-width: 1024px) {
+  .services__text p {
+    text-align: justify;
+  }
+
+  .hot__list {
+    display: flex;
+  }
+
+  .hot__item {
+    margin: auto;
+  }
+}
+
+.hot__img img {
+  display: flex;
+  align-items: center;
+}
+
+.hot__title h2 {
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+.hot__text h3 {
+  margin-top: 1.6rem;
+  font-size: 1.4rem;
+}
+
+.hot__icon ul {
+  margin-bottom: 1rem;
+  display: flex;
+}
+
+.hot__icon li {
+  margin-right: 1rem;
+}
+
+.hot__icon i {
+  cursor: text;
+  --tw-text-opacity: 1;
+  color: rgb(250 204 21 / var(--tw-text-opacity));
+}
+
+.hot__icon a {
+  font-size: .9rem;
+  --tw-text-opacity: 1;
+  color: rgb(156 163 175 / var(--tw-text-opacity));
+}
+
+.hot__icon a:hover {
+  --tw-text-opacity: 1;
+  color: hsl(175.96 98.89% 35.29% / var(--tw-text-opacity));
+}
+
+.hot__btn {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.hot__btn a {
+  --tw-border-opacity: 1;
+  border-color: hsl(208.7 51.11% 17.65% / var(--tw-border-opacity));
+  font-size: 1.3rem;
+}
+
+.hot__btn a:hover {
+  --tw-border-opacity: 1;
+  border-color: hsl(175.96 98.89% 35.29% / var(--tw-border-opacity));
+}
+
+.hot__mssg p {
+  --tw-text-opacity: 1;
+  color: rgb(156 163 175 / var(--tw-text-opacity));
+}
+
+.one {
+  padding: 2rem;
+}
+
+@media (min-width: 1024px) {
+  .one__wrapper {
+    margin-left: 20rem;
+    margin-right: 20rem;
+    display: flex;
+  }
+
+  .one__card {
+    margin: auto;
+    width: 90rem;
+    gap: -4rem;
+  }
+}
+
+.one__title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.one__card img {
+  margin-left: auto;
+  margin-right: auto;
+  width: -moz-fit-content;
+  width: fit-content;
+  --tw-translate-y: 50px;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  border-radius: 9999px;
+  transition-property: all;
+  transition-duration: 150ms;
+  transition-duration: .3;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.one__details {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1.5rem;
+  width: 60%;
+  --tw-bg-opacity: 1;
+  background-color: rgb(243 244 246 / var(--tw-bg-opacity));
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+  text-align: center;
+}
+
+.one__details a {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.one__details a:hover {
+  --tw-text-opacity: 1;
+  color: hsl(175.96 98.89% 35.29% / var(--tw-text-opacity));
+}
+
+.one__details p {
+  margin: 1.1rem;
+  --tw-text-opacity: 1;
+  color: hsl(175.96 98.89% 35.29% / var(--tw-text-opacity));
+}
+
+.impres {
+  position: relative;
+}
+
+.impres__wrapper {
+  height: 40vh;
+  background-image: url("./img/banner1.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+@media (min-width: 1024px) {
+  .impres__wrapper {
+    min-height: 50vh;
+  }
+}
+
+.bg2__text {
+  margin-left: 1.25rem;
+  margin-right: 1.25rem;
+  display: flex;
+  height: 40vh;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+@media (min-width: 1024px) {
+  .bg2__text {
+    margin: auto;
+    height: 40vh;
+    width: 35rem;
+  }
+}
+
+.bg2__text p {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+.bg2__text h1 {
+  margin-bottom: 1rem;
+  font-size: 2rem;
+}
+
+@media (min-width: 1024px) {
+  .bg2__text h1 {
+    font-size: 3rem;
+  }
+}
+
+.bg2__text h1 span {
+  font-weight: 700;
+}
+
+.bg2_btn {
+  margin-top: 1.5rem;
+}
+
+.bg2_btn a {
+  --tw-bg-opacity: 1;
+  background-color: hsl(175.96 98.89% 35.29% / var(--tw-bg-opacity));
+  padding-top: .8rem;
+  padding-bottom: .8rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.bg2_btn a:hover {
+  background-color: transparent;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
 .bg-primary {

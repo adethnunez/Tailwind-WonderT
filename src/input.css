@@ -239,10 +239,25 @@
     .view__group{
         @apply overflow-hidden h-[25rem] w-[25rem] my-5 flex items-center mx-auto lg:relative lg:w-[50rem] lg:h-[30rem]  ;
     }
+    /* .view__wrapper a span{
+        @apply flex items-center w-[25px] opacity-90 transform transition-[.3s] ease-in;
+    }
+    .view__wrapper a:hover span{
+        @apply w-[40px] opacity-90;
+    }
+    .view__wrapper a span::before, .tour__wrapper a span::after{
+        @apply content-[''] inline-block transform transition-[.3s] ease-in;
+    }
+    .view__wrapper a span::before{
+        @apply h-[2px] flex-grow-[1] bg-dark;
+    }
+    .view__wrapper a span::after{
+        @apply w-0 h-0 border-solid border-t-[3px] border-r-0 border-b-[3px] border-l-[6px] border-t-transparent border-r-transparent border-b-transparent border-l-black;
+    } */
 
 
     .view__btn{
-        @apply text-[1.1rem] flex justify-center 
+        @apply text-[1.1rem] flex justify-center lg:pb-[3rem]
     }
     .view__btn a{
         @apply hover:translate-x-2 duration-200
@@ -313,13 +328,13 @@
 
 
     .services__wrapper{
-        @apply mt-[2rem] lg:grid lg:grid-cols-3 lg:gap-[1.5rem] lg:m-auto lg:w-[90rem]
+        @apply mt-[2rem] lg:grid lg:grid-cols-3 lg:gap-[1.5rem] lg:m-auto lg:w-[75rem]
     }
     .services__title{
         @apply text-dark text-[2rem] text-center
     }
     .services__item{
-        @apply border-solid border-[8px] border-[#f4f4f4] mb-[2rem] 
+        @apply border-solid border-[8px] border-[#f4f4f4] mb-[2rem] lg:flex
     }
     .container{
             @apply m-0 flex flex-col gap-[1.5rem]
@@ -328,29 +343,112 @@
         @apply flex justify-center mt-[1rem] 
     }
     .services__icon i{
-        @apply text-primary text-[2rem] 
+        @apply text-primary text-[2rem] m-[1rem]
     }
     .services__text {
-        @apply text-[#a0bada] pt-[1.5rem] lg:flex 
+        @apply text-gray-400 pt-[1.5rem] lg:mr-[1.5rem]
     }
     .services__text h3{
-        @apply text-center text-dark text-[1.5rem]
+        @apply text-center text-dark text-[1.5rem] cursor-pointer hover:text-primary lg:text-justify
     }
     .services__text p{
-        @apply text-center pt-[1rem] pb-[1rem]
+        @apply text-center pt-[1rem] pb-[1rem] lg:text-justify
+    }
+
+   
+
+   .hot__list{
+    @apply lg:flex
+   }
+   .hot__item{
+    @apply lg:m-auto
+   }
+    .hot__img img{
+        @apply items-center flex  
+    }
+    .hot__title h2{
+        @apply text-center text-[1.8rem] font-semibold 
+    }
+    .hot__text h3{
+        @apply text-[1.4rem] mt-[1.6rem]
+    }
+    .hot__icon ul{
+        @apply flex mb-[1rem]
+    }
+    .hot__icon li {
+        @apply  mr-[1rem]
+    }
+    .hot__icon i {
+        @apply text-yellow-400 cursor-text
+    }
+    .hot__icon a{
+        @apply text-gray-400 text-[.9rem] hover:text-primary
+    }
+    .hot__btn{
+        @apply mt-[2rem] mb-[2rem]
+    }
+    .hot__btn a{
+        @apply border-dark hover:border-primary text-[1.3rem]
+    }
+    .hot__mssg p{
+        @apply text-gray-400
+    }
+
+    .one{
+        @apply p-[2rem]
+    }
+    .one__wrapper{
+        @apply lg:flex lg:ml-[20rem] lg:mr-[20rem]
+    }
+    .one__card{
+        @apply lg:m-auto lg:w-[90rem] lg:gap-[-4rem]
+    }
+    .one__title{
+        @apply text-center text-[2rem] font-medium
+    }
+    .one__card img{
+        @apply rounded-full w-fit mx-auto translate-y-[50px] transition-all duration-[.3] ease-in-out
+    }
+    .one__details{
+        @apply mt-[1.5rem] text-center py-[2.5rem] w-[60%] mx-auto bg-gray-100 
+    }
+    .one__details a{
+        @apply font-semibold text-[1.1rem] hover:text-primary
+    }
+    .one__details p{
+        @apply text-primary m-[1.1rem]
+    }
+
+    .impres{
+        @apply relative ;
+    }
+
+    .impres__wrapper{
+        @apply bg-slider1 bg-fixed bg-cover bg-no-repeat bg-center h-[40vh] lg:min-h-[50vh] 
+    }
+    .bg2__text{
+        @apply flex flex-col justify-center text-center h-[40vh] text-puti mx-5 lg:m-auto lg:w-[35rem] lg:h-[40vh] 
+    }
+    .bg2__text p{
+        @apply text-[1rem] mb-[1rem]
+    }
+    .bg2__text h1{
+        @apply text-[2rem] mb-[1rem] lg:text-[3rem] ;
+    }
+    .bg2__text h1 span{
+        @apply  font-bold
+    }
+    .bg2_btn{
+        @apply mt-[1.5rem]
+    }
+    .bg2_btn a{
+        @apply bg-primary hover:bg-transparent hover:text-puti py-[.8rem] px-[1.5rem] 
     }
    
+
+ 
    
    
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
+
 }
 

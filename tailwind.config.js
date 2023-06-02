@@ -22,6 +22,7 @@ module.exports = {
         'slider1': 'url("./img/banner1.jpg")',
         'slider2': 'url("./img/slider2.jpg")',
         'slider3': 'url("./img/banner3.jpg")',
+        'bg2': 'url("./img/bgg1.jpg")'
       }
     },
   },
