@@ -334,7 +334,7 @@
         @apply text-dark text-[2rem] text-center
     }
     .services__item{
-        @apply border-solid border-[8px] border-[#f4f4f4] mb-[2rem] lg:flex
+        @apply border-solid border-[8px] border-[#f4f4f4] mb-[2rem] lg:flex lg:hover:shadow-2xl lg:flex-row lg:text-left lg:items-start transition-all duration-500
     }
     .container{
             @apply m-0 flex flex-col gap-[1.5rem]
@@ -357,42 +357,52 @@
 
    
 
-   .hot__list{
-    @apply lg:flex
-   }
-   .hot__item{
-    @apply lg:m-auto
-   }
-    .hot__img img{
-        @apply items-center flex  
+    .buy__list{
+        @apply p-[2rem];
     }
-    .hot__title h2{
-        @apply text-center text-[1.8rem] font-semibold 
+    .buy__img figure{
+        @apply overflow-hidden;
     }
-    .hot__text h3{
-        @apply text-[1.4rem] mt-[1.6rem]
+    .buy__img p{
+        @apply absolute overflow-hidden top-0 right-0 px-[1rem] py-1 font-bold text-white bg-transparent z-20;
     }
-    .hot__icon ul{
-        @apply flex mb-[1rem]
+    .buy__img p::before{
+        @apply absolute right-[-2rem] top-0 bg-primary block content-[""] w-[5.5rem] h-[2rem] z-[-1] origin-bottom-left skew-x-[45deg];
     }
-    .hot__icon li {
-        @apply  mr-[1rem]
+    .buy__img figure img{
+        @apply flex m-auto  cursor-pointer lg:hover:scale-[1.08] transition-all duration-500;
     }
-    .hot__icon i {
-        @apply text-yellow-400 cursor-text
+    .buy__item{
+        @apply relative lg:border-[1px] lg:border-gray-300 lg:flex lg:items-center lg:max-w-[70rem] lg:mx-auto lg:mb-[2rem];
     }
-    .hot__icon a{
-        @apply text-gray-400 text-[.9rem] hover:text-primary
+    .buy__text{
+        @apply lg:max-w-[25rem] lg:mx-auto;
     }
-    .hot__btn{
-        @apply mt-[2rem] mb-[2rem]
+    .buy__text span{
+        @apply mr-[1rem] my-[1.5rem];
+    } 
+    .buy__text h5{
+        @apply my-[1rem] text-gray-500;
     }
-    .hot__btn a{
-        @apply border-dark hover:border-primary text-[1.3rem]
+    .buy__text h3{
+        @apply text-[1.3rem] text-dark mt-[1rem] font-semibold;
     }
-    .hot__mssg p{
-        @apply text-gray-400
+    .buy__text p{
+        @apply text-gray-500 text-[.9rem];
     }
+     .buy__title h2{
+        @apply text-center font-semibold text-dark text-[2rem] mt-[2rem];
+     }
+     .buy__btn{
+        @apply my-[2rem] py-[1rem];
+     }
+    .buy__btn a{
+        @apply text-center text-dark  px-[2rem] py-[1rem] bg-transparent border-[2px] border-dark w-[11rem] h-[4rem];
+    }
+    .buy__btn a:hover{
+        @apply bg-primary border-primary transition-all duration-500;
+    }
+
 
     .one{
         @apply p-[2rem]
@@ -407,7 +417,7 @@
         @apply text-center text-[2rem] font-medium
     }
     .one__card img{
-        @apply rounded-full w-fit mx-auto translate-y-[50px] transition-all duration-[.3] ease-in-out
+        @apply cursor-pointer border-4 rounded-full border-gray-50 mx-auto translate-y-[50px] lg:hover:-translate-y-1 lg:hover:border-primary transition-all; 
     }
     .one__details{
         @apply mt-[1.5rem] text-center py-[2.5rem] w-[60%] mx-auto bg-gray-100 
@@ -444,11 +454,31 @@
     .bg2_btn a{
         @apply bg-primary hover:bg-transparent hover:text-puti py-[.8rem] px-[1.5rem] 
     }
+
+    .container h2{
+        @apply m-auto text-[2rem] font-semibold
+    }
+    .users{
+        @apply py-[2rem] lg:p-0 bg-gray-50 w-full;
+    }
+    .users__wrapper{
+        @apply lg:flex lg:m-auto lg:w-[70rem]
+    }
+    .users__item{
+        @apply text-center drop-shadow-2xl bg-puti p-[1rem] my-[8rem] lg:mx-[1rem] 
+    }
+    .users__text img{
+        @apply inline-block mx-auto border-8 rounded-full border-puti mt-[-4rem] ;
+    }
+    .users__text p{
+        @apply my-[1rem];
+    }
+    .users__text h5{
+        @apply text-[1.5rem] text-primary hover:text-green-300 transition-all duration-500;
+    }
    
 
  
    
    
-
-}
-
+    }
