@@ -3,28 +3,54 @@
 @tailwind utilities;
 
 .container{
-    @apply mx-auto p-[1.5rem] w-full max-w-[140rem];
+    @apply mx-auto p-[1.5rem] w-full max-w-[140rem] lg:max-w-[80rem];
 }
 
-.tns-nav{
+.banner .tns-nav{
     @apply absolute right-3 top-[45%] z-40 flex flex-col lg:top-[50%] lg:right-[20rem];
 }
-
+.post .tns-nav{
+    @apply z-40 flex items-center justify-center;
+}
+.gallery .tns-nav{
+    @apply flex items-center justify-center;
+}
+.gallery .tns-outer{
+    @apply lg:mx-[5rem] ;
+}
+.tns-controls{
+    @apply absolute top-[50%] right-0 left-0 mx-[2rem] flex items-center justify-between max-w-[106rem] z-10;
+}
+.tns-controls button{
+    @apply flex items-center;
+}
+.tns-controls button:first-child{
+    @apply  text-gray-500 transition-all hover:-translate-x-1 hover:text-primary;
+}
+.tns-controls button:last-child{
+    @apply  text-gray-500 transition-all hover:translate-x-1 hover:text-primary;
+}
+.tns-controls button:first-child::after{
+    @apply block bg-gray-500 w-[2rem] h-[.11rem] content-[""] hover:translate-x-2 hover:bg-primary transition-all;
+}
+.tns-controls button:last-child::before{
+    @apply block bg-gray-500 w-[2rem] h-[.11rem] content-[""] hover:-translate-x-2 hover:bg-primary transition-all;
+}
 .tns-nav button{
-    @apply bg-gray-400 h-[1rem] w-[1rem] my-1 transition-all;
+    @apply bg-gray-400 h-[1rem] w-[1rem] my-1 mx-1 transition-all;
 }
 .tns-nav .tns-nav-active{
     @apply bg-primary transition-all;
 }
-.tns-slide-active .banner__content h1{
+.banner .tns-slide-active .banner__content h1{
     @apply translate-y-0 opacity-100 transition-all duration-1000;
 }
-.tns-slide-active .banner__content p{
+.banner .tns-slide-active .banner__content p{
     @apply translate-x-0 opacity-100 transition-all duration-1000;
 }
-.tns-slide-active .banner__content a{
+.banner .tns-slide-active .banner__content a{
     @apply translate-x-0 opacity-100 transition-all duration-1000;
-} 
+}
 
 @layer utilities{
     .btn{
@@ -221,24 +247,37 @@
     /* .view__wrapper{
         @apply lg:mb-0
     } */
-    .view{
-        @apply mt-[1rem] bg-[#f7f7f7]
+    .tours {
+        @apply bg-[#f7f7f7];
     }
-    .view__group{
-        @apply  max-h-[25rem] bg-no-repeat relative w-full flex flex-row justify-center my-10 transition-all cursor-pointer lg:top-[-9rem]   ;
+    .tours__list{
+      @apply lg:flex lg:justify-center lg:gap-[2rem];
     }
-      .view__pic{
-        @apply  lg:flex  lg:ml-[20rem] lg:mr-[20rem] lg:max-h-[20rem]
-    }  
-    .view__detail img{
-        @apply  hover:scale-105 transition-all  ;
-    } 
-    .view__detail h4{
-        @apply absolute w-full bottom-0 text-[1.5rem] text-center font-bold text-puti transition-all mb-[1.5rem] lg:text-center ;
+    .tours__item{
+        @apply relative lg:top-[-3rem];
     }
-    .view__group{
-        @apply overflow-hidden h-[25rem] w-[25rem] my-5 flex items-center mx-auto lg:relative lg:w-[50rem] lg:h-[30rem]  ;
+    .tours__item a figure{
+        @apply overflow-hidden;
     }
+    .tours__item a figure img{
+        @apply flex m-auto hover:scale-[1.08] transition-all duration-500;
+    }
+    .tours__item h3{
+        @apply relative text-[1.5rem] text-puti text-center top-[-3rem] font-semibold;
+    }
+    .tours__btn{
+        @apply text-[1.1rem] flex justify-center lg:pb-[3rem]
+    }
+    .tours__btn a{
+        @apply hover:translate-x-2 duration-200
+    }
+    .tours__btn a:hover i{
+        @apply scale-x-150 duration-300
+    }
+    .tours__btn i{
+        @apply ml-[.5rem] lg:p-0
+    }
+        
     /* .view__wrapper a span{
         @apply flex items-center w-[25px] opacity-90 transform transition-[.3s] ease-in;
     }
@@ -477,8 +516,128 @@
         @apply text-[1.5rem] text-primary hover:text-green-300 transition-all duration-500;
     }
    
+    .number{
+        @apply bg-blue-200
+    }
+    .number__wrapper h1 {
+        @apply text-center text-[2rem] font-bold my-[2rem]
+    }
+    .number__item{
+        @apply bg-cover bg-no-repeat mx-auto h-[15rem] w-[18rem] p-[1rem]
+    }
+    .number__text{
+        @apply text-dark text-center bg-puti p-[1rem] h-full flex flex-col justify-center
+    }
+    .number__text h1{
+        @apply m-0
+    }
+    .number__text p {
+        @apply font-semibold
+    }
+    .number__card{
+        @apply lg:flex lg:items-center lg:m-auto
+    }
 
- 
+    .sign {
+        @apply w-full;
+    }
+    .sign__wrapper{
+        @apply bg-no-repeat h-[20rem] bg-cover w-full flex items-center bg-fixed
+    }
+    .sign__text {
+        @apply text-center  text-puti h-full w-full flex flex-col justify-center px-[1rem]
+    }
+    .sign__text h1{
+        @apply  text-[2rem] font-semibold lg:text-[3rem]
+    }
+    .sign__text p {
+        @apply my-[2rem] lg:mx-[45rem]
+    }
+    .sign__log{
+        @apply flex flex-col lg:w-fit lg:mx-auto lg:flex-row 
+    }
+    .discount__actions input::placeholder{
+        @apply text-white ;
+    }
+    .sign__log input{
+        @apply p-[1rem] bg-puti bg-opacity-40 lg:my-[1rem] lg:mr-[1rem];
+    }
+
+    .sign__log a{
+        @apply bg-primary font-semibold p-[1rem] my-[1rem] hover:bg-dark transition-all duration-300;
+    }
    
-   
+    .post{
+        @apply relative;
+    }
+    .post__wrapper{
+        @apply mx-auto;
+    }
+    .post__wrapper h1{
+        @apply text-center text-[2rem] font-bold my-[1rem];
+    }
+    .post__card{
+        @apply flex items-center justify-center pb-[5rem];
+    }
+    .post__item{
+        @apply w-fit relative;
+    }
+    .post__item:hover img{
+        @apply lg:scale-105 transition-all duration-500;
+    }
+    .post__item:hover .post__item__icons ul li{
+        @apply h-full translate-y-0 transition-all opacity-100;
+    }
+    .post__item__img{
+        @apply overflow-hidden w-fit mx-auto;
+    }
+    .post__item img{
+        @apply w-fit transition-all duration-500 ;
+    }
+    .post__item__text{
+        @apply text-center absolute -bottom-10 bg-white w-[80%] mx-auto left-[10%] shadow-md p-[1rem] transition-all;
+    }
+    .post__item__text h3{
+        @apply text-[1.4rem] font-bold hover:text-primary transition-all duration-500;
+    }
+    .post__item__text h4{
+        @apply text-[1.2rem] text-primary;
+    }
+    .post__item__icons ul{
+        @apply flex items-center justify-center gap-2;
+    }
+    .post__item__icons ul li{
+        @apply lg:overflow-hidden lg:-translate-y-5 lg:h-0 lg:opacity-0 transition-all;
+    }
+    .post__item__icons ul li a{
+        @apply text-[1.5rem] hover:text-primary transition-all duration-500;
+    }
+
+    .gallery{
+        @apply relative flex flex-col bg-grey lg:w-full h-fit pb-[5rem]
+    }
+    .gallery__text{
+        @apply mx-auto bg-white mb-[2rem] px-[3rem] py-[.5rem] text-[1rem] font-light;
+    }
+    .gallery__wrapper{
+        @apply flex items-center justify-center mx-auto pb-[2rem];
+    }
+    .gallery__item__img{
+        @apply relative h-fit w-fit overflow-hidden mx-auto lg:m-0;
+    }
+    .gallery__item__img img{
+        @apply transition-all duration-500;
+    }
+    .gallery__item__img:hover img{
+        @apply lg:scale-105 transition-all duration-500;
+    }
+    .gallery__item__img:hover i{
+        @apply opacity-100 transition-all duration-500;
+    }
+    .gallery__item__img i{
+        @apply absolute h-[13rem] w-[18.5rem] lg:h-[10rem] lg:w-[14.7rem] bg-black bg-opacity-20 flex items-center justify-center mx-1 my-2 bottom-0 text-white border-2 border-white lg:opacity-0 transition-all duration-500;
+    }
+
+    
+
     }
