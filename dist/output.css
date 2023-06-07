@@ -2000,7 +2000,7 @@ html{
 @media (min-width: 1024px) {
   .number__item {
     height: 18rem;
-    width: 25rem;
+    width: 23rem;
   }
 }
 
@@ -2312,12 +2312,12 @@ html{
   margin-bottom: 2rem;
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
-  padding-left: 3rem;
-  padding-right: 3rem;
+  padding-left: 5rem;
+  padding-right: 5rem;
   padding-top: .5rem;
   padding-bottom: .5rem;
-  font-size: 1rem;
-  font-weight: 300;
+  font-size: 1.5rem;
+  font-weight: 600;
 }
 
 .gallery__wrapper {
@@ -2399,8 +2399,8 @@ html{
 
 @media (min-width: 1024px) {
   .gallery__item__img i {
-    height: 10rem;
-    width: 14.7rem;
+    height: 8.9rem;
+    width: 13rem;
     opacity: 0;
   }
 }
@@ -2779,8 +2779,8 @@ html {
 
 @media (min-width: 1024px) {
   .gallery .tns-outer {
-    margin-left: 5rem;
-    margin-right: 5rem;
+    margin-left: 15rem;
+    margin-right: 15rem;
   }
 }
 
