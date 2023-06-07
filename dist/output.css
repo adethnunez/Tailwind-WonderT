@@ -1880,6 +1880,8 @@ html{
 }
 
 .bg2_btn a:hover {
+  --tw-border-opacity: 1;
+  border-color: rgb(255 255 255 / var(--tw-border-opacity));
   background-color: transparent;
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
@@ -1982,6 +1984,13 @@ html{
   padding: 1rem;
 }
 
+@media (min-width: 1024px) {
+  .number__item {
+    height: 18rem;
+    width: 25rem;
+  }
+}
+
 .number__text {
   display: flex;
   height: 100%;
@@ -1999,11 +2008,22 @@ html{
   margin: 0px;
 }
 
+@media (min-width: 1024px) {
+  .number__text h1 {
+    font-size: 4rem;
+  }
+}
+
 .number__text p {
+  margin: 0.75rem;
   font-weight: 600;
 }
 
 @media (min-width: 1024px) {
+  .number__text p {
+    font-size: 2rem;
+  }
+
   .number__card {
     margin: auto;
     display: flex;
@@ -2594,6 +2614,44 @@ html{
 .footer__social ul li a:hover {
   --tw-text-opacity: 1;
   color: hsl(175.96 98.89% 35.29% / var(--tw-text-opacity));
+}
+
+#myBtn {
+  position: fixed;
+  bottom: 20px;
+  right: 25px;
+  z-index: 99;
+  flex: none;
+  cursor: pointer;
+  border-right-width: 4px;
+  border-style: none;
+  --tw-bg-opacity: 1;
+  background-color: hsl(175.96 98.89% 35.29% / var(--tw-bg-opacity));
+  padding: 10px;
+  font-size: 1rem;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+#myBtn i {
+  text-align: center;
+  font-size: 1rem;
+}
+
+#myBtn:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 300ms;
+}
+
+html {
+  scroll-behavior: smooth
+}
+
+.block {
+  display: block;
 }
 
 .bg-primary {

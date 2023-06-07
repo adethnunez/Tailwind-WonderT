@@ -435,6 +435,7 @@
         @apply text-primary m-[1.1rem]
     }
 
+
     .impres{
         @apply relative ;
     }
@@ -458,7 +459,7 @@
         @apply mt-[1.5rem]
     }
     .bg2_btn a{
-        @apply bg-primary hover:bg-transparent hover:text-puti py-[.8rem] px-[1.5rem] 
+        @apply bg-primary hover:bg-transparent hover:text-puti py-[.8rem] px-[1.5rem] hover:border-puti
     }
 
     .container h2{
@@ -490,16 +491,16 @@
         @apply text-center text-[2rem] font-bold my-[2rem]
     }
     .number__item{
-        @apply bg-cover bg-no-repeat mx-auto h-[15rem] w-[18rem] p-[1rem]
+        @apply bg-cover bg-no-repeat mx-auto h-[15rem] w-[18rem] p-[1rem] lg:h-[18rem] lg:w-[25rem]
     }
     .number__text{
         @apply text-dark text-center bg-puti p-[1rem] h-full flex flex-col justify-center
     }
     .number__text h1{
-        @apply m-0
+        @apply m-0 lg:text-[4rem]
     }
     .number__text p {
-        @apply font-semibold
+        @apply font-semibold lg:text-[2rem] m-3
     }
     .number__card{
         @apply lg:flex lg:items-center lg:m-auto
@@ -709,4 +710,16 @@
         @apply hover:text-primary transition ease-in-out duration-300
     }
 
+    #myBtn{
+        @apply fixed flex-none bottom-[20px] right-[25px] z-[99] text-[1rem] border-none bg-primary text-puti cursor-pointer p-[10px] border-r-[4px] 
+    }
+    #myBtn i{
+        @apply text-[1rem] text-center
+    }
+    #myBtn:hover{
+        @apply bg-black transition-all duration-300
+    }
+    html {
+        scroll-behavior: smooth
+      }
     }
