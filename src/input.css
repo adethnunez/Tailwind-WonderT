@@ -275,61 +275,67 @@
         
    
   /* ------------------------DISCOVER------------------- */
-    .discover__wrapper{
-        @apply lg:flex lg:items-start lg:justify-center gap-[5rem];
-    }
-    .discover__nav{
-        @apply text-center max-w-[30rem] lg:max-w-[90rem];
-    }
-   /* .discover-container{
-    @apply flex flex-col justify-center
-   } */
-    
-    .discover__nav ul{
-        @apply flex justify-center items-center flex-wrap lg:flex-nowrap;
-    }
-    .discover__nav ul li{
-        @apply relative py-[.5rem] px-[1rem] gap-[2rem] border-t-[1px] border-b-[1px] lg:border-b-[3px] lg:border-t-0;
-    }
-    .discover__nav ul li:last-child{
-        @apply mt-[1rem] lg:mt-0 ;
-    }
-    .discover__nav__link.active{
-        @apply border-primary;
-    }
-    .discover__nav__link.active a{
-        @apply  text-primary;
-    }
-    .discover__nav ul li a{
-        @apply text-dark text-center text-[1.2rem] hover:text-primary;
-    }
-    .discover__content{
-        @apply relative min-h-[17rem];
-    }
-    .discover__tab{
-        @apply lg:block;
-    }
-    .discover__tab h2{
-        @apply text-center font-semibold text-[1.5rem] my-[2rem];
-    }
-    .discover__tab__content{
-        @apply absolute opacity-0 mx-auto max-w-[30rem] translate-x-[5rem]; 
-    }
-    .discover__tab__content p{
-        @apply text-center my-[1rem];
-    }
-    .discover__tab__content.active{
-        @apply opacity-100 translate-x-0;
-    }
-    .discover__btn{
-        @apply  mt-[4rem] flex gap-[2rem] justify-center;
-    }
-     .btn.primary{
-        @apply text-center text-light bg-primary border-[2px] border-primary px-[2rem] hover:border-dark hover:bg-transparent hover:text-dark py-[1rem] w-[11rem] h-[4rem];
-    }
-    .btn.wth{
-        @apply text-center text-dark px-[2rem] py-[1rem] bg-transparent border-[2px] border-dark w-[11rem] h-[4rem] hover:bg-primary hover:border-transparent;
-    }
+  .discover__wrapper{
+    @apply lg:flex lg:items-start lg:justify-center gap-[5rem];
+}
+.discover__nav{
+    @apply text-center max-w-[30rem] lg:max-w-[90rem];
+}
+/* .discover-container{
+@apply flex flex-col justify-center
+} */
+
+.discover__nav ul{
+    @apply flex justify-center items-center flex-wrap lg:flex-nowrap;
+}
+.discover__nav ul li{
+    @apply relative py-[.5rem] px-[1rem] gap-[2rem] border-t-[1px] border-b-[1px] lg:border-b-[3px] lg:border-t-0;
+}
+.discover__nav ul li:last-child{
+    @apply mt-[1rem] lg:mt-0 ;
+}
+.discover__nav__link.active{
+    @apply border-primary;
+}
+.discover__nav__link.active a{
+    @apply  text-primary;
+}
+.discover__nav ul li a{
+    @apply text-dark text-center text-[1.2rem] hover:text-primary;
+}
+.discover__content{
+    @apply relative min-h-[17rem];
+}
+.discover__tab{
+    @apply lg:block;
+}
+.discover__tab h2{
+    @apply text-center font-semibold text-[1.5rem] my-[2rem];
+}
+.discover__tab__content{
+    @apply absolute hidden mx-auto max-w-[30rem] translate-x-[5rem]; 
+}
+.discover__tab__content p{
+    @apply text-center my-[1rem];
+}
+.discover__tab__content.active{
+    @apply inline-block translate-x-0;
+}
+.discover__btn{
+    @apply  mt-[4rem] flex gap-[2rem] justify-center;
+}
+.discover__btn a:first-child{
+    @apply text-center text-light bg-primary border-[2px] border-primary px-[2rem] py-[1rem] w-[11rem] h-[4rem];
+}
+.discover__btn a:first-child:hover{
+    @apply border-dark bg-transparent text-dark transition-all duration-500;
+}
+.discover__btn a:last-child{
+    @apply text-center text-dark px-[2rem] py-[1rem] bg-transparent border-[2px] border-dark w-[11rem] h-[4rem];
+}
+.discover__btn a:last-child:hover{
+    @apply bg-primary border-primary transition-all duration-500;
+}
      
 
   /* -----------------------OUR SERVICES------------------- */
@@ -485,7 +491,7 @@
     }
    
     .number{
-        @apply bg-puti
+        @apply bg-puti lg:p-[4rem]
     }
     .number__wrapper h1 {
         @apply text-center text-[2rem] font-bold my-[2rem]
@@ -510,7 +516,7 @@
         @apply w-full;
     }
     .sign__wrapper{
-        @apply bg-no-repeat h-[20rem] bg-cover w-full flex items-center bg-fixed
+        @apply bg-no-repeat h-[20rem] bg-cover w-full flex items-center bg-fixed lg:h-[30rem]
     }
     .sign__text {
         @apply text-center  text-puti h-full w-full flex flex-col justify-center px-[1rem]
@@ -580,6 +586,7 @@
     .post__item__icons ul li a{
         @apply text-[1.5rem] hover:text-primary transition-all duration-500;
     }
+
 
     .gallery{
         @apply relative flex flex-col bg-grey lg:w-full h-fit pb-[5rem]

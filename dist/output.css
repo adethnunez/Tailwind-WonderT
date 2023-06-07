@@ -1305,8 +1305,8 @@ html{
 }
 
 /* .discover-container{
-    @apply flex flex-col justify-center
-   } */
+@apply flex flex-col justify-center
+} */
 
 .discover__nav ul {
   display: flex;
@@ -1394,10 +1394,10 @@ html{
   position: absolute;
   margin-left: auto;
   margin-right: auto;
+  display: none;
   max-width: 30rem;
   --tw-translate-x: 5rem;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-  opacity: 0;
 }
 
 .discover__tab__content p {
@@ -1407,9 +1407,9 @@ html{
 }
 
 .discover__tab__content.active {
+  display: inline-block;
   --tw-translate-x: 0px;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-  opacity: 1;
 }
 
 .discover__btn {
@@ -1419,7 +1419,7 @@ html{
   gap: 2rem;
 }
 
-.btn.primary {
+.discover__btn a:first-child {
   height: 4rem;
   width: 11rem;
   border-width: 2px;
@@ -1436,15 +1436,18 @@ html{
   color: hsl(208.7 51.11% 17.65% / var(--tw-text-opacity));
 }
 
-.btn.primary:hover {
+.discover__btn a:first-child:hover {
   --tw-border-opacity: 1;
   border-color: hsl(208.7 51.11% 17.65% / var(--tw-border-opacity));
   background-color: transparent;
   --tw-text-opacity: 1;
   color: hsl(208.7 51.11% 17.65% / var(--tw-text-opacity));
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 500ms;
 }
 
-.btn.wth {
+.discover__btn a:last-child {
   height: 4rem;
   width: 11rem;
   border-width: 2px;
@@ -1460,10 +1463,14 @@ html{
   color: hsl(208.7 51.11% 17.65% / var(--tw-text-opacity));
 }
 
-.btn.wth:hover {
-  border-color: transparent;
+.discover__btn a:last-child:hover {
+  --tw-border-opacity: 1;
+  border-color: hsl(175.96 98.89% 35.29% / var(--tw-border-opacity));
   --tw-bg-opacity: 1;
   background-color: hsl(175.96 98.89% 35.29% / var(--tw-bg-opacity));
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 500ms;
 }
 
 /* -----------------------OUR SERVICES------------------- */
@@ -1966,6 +1973,12 @@ html{
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
+@media (min-width: 1024px) {
+  .number {
+    padding: 4rem;
+  }
+}
+
 .number__wrapper h1 {
   margin-top: 2rem;
   margin-bottom: 2rem;
@@ -2043,6 +2056,12 @@ html{
   background-size: cover;
   background-attachment: fixed;
   background-repeat: no-repeat;
+}
+
+@media (min-width: 1024px) {
+  .sign__wrapper {
+    height: 30rem;
+  }
 }
 
 .sign__text {
